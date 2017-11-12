@@ -1,0 +1,63 @@
+/** --------------------------------------------------------------
+ *  Header
+ */
+
+ // Size each item in the header
+ .site-logo-text,
+ .navbar2,
+ .profile {
+     float: left;
+     width: 30%;
+ }
+
+ .site-header {
+     height: 80px;
+     margin-top: 8px;
+ }
+
+ // Site title
+ .site-logo-text {
+     font-size: 2em;
+
+     a {
+         text-decoration: none;
+     }
+ }
+
+// Size of max navbar button
+.rm-max .rm-small .rm-button {
+    //font-size: 2em;
+    font-size: @maxButtonFontSize;
+}
+
+@maxButtonFontSize: 2em;
+
+.rm-max .rm-small .rm-button.rm-clicked {
+    color: @rmColor;
+}
+
+// Style navbar
+.rm-desktop li {
+    //background-color: #096;
+}
+
+@rmColor: #096;
+@navbarItemBgColor: #096;
+@navbarBgColor: #096;
+
+.border(@radius: 0) {
+    border-radius: @radius;
+    border: 2px solid darken(@navbarItemBgColor, 10%);
+}
+.navbar2 {
+    .border(5px);
+    width: auto;
+    & .rm-desktop li {
+        background-color: @navbarBgColor;
+        margin-right: -4px;
+        .border();
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
