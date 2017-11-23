@@ -1,0 +1,35 @@
+/**
+ * Typographic mixins.
+ */
+.font(@fontSize: 100.01%, @fontFamily: @fontFamilyBody) {
+    font: @fontSize/@lineHeight @fontFamily;
+}
+
+.fontSize(@fontSize) {
+    font-size: @fontSize;
+    line-height: @lineHeight / unit(@fontSize) * ceil(unit(@fontSize) / @lineHeight);
+}
+
+// 5/4 for smaller font-size, incremental leading.
+
+.calcNavbarPadding(@height) {
+    // @padding: @magicNumber - mod(@height, @magicNumber); Not working
+    @padding: (@magicNumber + mod(@height, @magicNumber)) - @magicNumber / 2 - @navbarBorderWidth * 2; // navbarBorderWidth is set on navbar2 and li
+}
+
+.calcFlashMargin(@height) {
+    @margin: @magicNumber - mod(@height, @magicNumber);
+}
+
+/**
+ * Show horisontal grid.
+ */
+.showHorGrid(@gridImage) {
+    //background-image: url(../img/typo/horisontal-grid-24.png);
+    background-image: url("@{gridImage}");
+    //background-size: 100% auto;
+
+    // @media (min-width: @maxWidth) {
+    //     background-size: @maxWidth auto;
+    // }
+}

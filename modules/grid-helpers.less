@@ -1,0 +1,12 @@
+/**
+ * Show vertical grid.
+ */
+.showGrid(@maxWidth: 1100px, @gridImage) {
+    //background: url(../img/grid/grid940x12x60x20-nomargin.png) repeat-y fixed center center;
+    background: url("@{gridImage}") repeat-y fixed center center;
+    background-size: 100% auto;
+
+    @media (min-width: @maxWidth) {
+        background-size: @maxWidth auto;
+    }
+}

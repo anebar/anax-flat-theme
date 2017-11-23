@@ -1,0 +1,50 @@
+@import "typography-font-families.less";
+@import "typography-sizes.less";
+@import "typography-sizesFamiliesChanged.less";
+@import "typography-mixins.less";
+@import "typography-defaults.less";
+
+body {
+    .font();
+    .typographyHeadings();
+    .typographyTextElements();
+    .typographyCodeElements();
+    .typographyListElements();
+    .typographyTableElements();
+    .typographyOtherElements();
+}
+
+@gridImage: "../img/typo/horisontal-grid-24.png";
+html.hgrid body {
+    .showHorGrid(@gridImage);
+}
+body[class*="route-typography"] {
+    .showHorGrid(@gridImage);
+}
+
+nav ul.rm-default a {
+    @height: @magicNumber * 2;
+    .calcNavbarPadding(@height);
+    padding-top: @padding !important;
+    padding-bottom: @padding !important;
+}
+
+.flash-wrap {
+    @height: 191px;
+    height: 191px;
+    .calcFlashMargin(@height);
+    margin-bottom: (@margin) !important;
+}
+
+.footer h4 {
+    margin-top: @magicNumber;
+}
+
+div.site-footer  {
+    background-color: grey;
+    opacity: 0.3;
+}
+
+div.site-footer p {
+    margin-top: @magicNumber;
+}
