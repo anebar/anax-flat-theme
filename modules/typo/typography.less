@@ -22,6 +22,16 @@ body[class*="route-typography"] {
     .showHorGrid(@gridImage);
 }
 
+.rm-max {
+    // Place the menu button
+    &.rm-navbar {
+        // top: 16px;
+        // right: 24px;
+        top: @magicNumber / 4;
+        right: @magicNumber;
+    }
+}
+
 nav ul.rm-default a {
     @height: @magicNumber * 2;
     .calcNavbarPadding(@height);
