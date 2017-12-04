@@ -1,0 +1,103 @@
+/**
+* Anax Flat theme.
+* typography - A theme where the typography really stands out
+*/
+@import url(base.less);
+
+@backgroundColor: #626F95;
+@bodyColor: #FFF7E6;
+@navbarBgColor: #885B91;
+@navbarItemBgColor: @navbarBgColor;
+@site_logo_text_shadow: @bodyColor;
+@siteFooterBgColor: @navbarBgColor;
+@footerOpacity: unset;
+@selectBgColor: @bodyColor;
+@siteFooterColor: #FFF;
+@codeColor: @bodyColor;
+@codeColor: @backgroundColor;
+@codeBgColor: @bodyColor;
+@codeBorderColor: @codeColor;
+@breadcrumbHoverColor: #000;
+@nextPreviousHoverColor: @breadcrumbHoverColor;
+
+//lighten(@backgroundColor, 10%);
+
+// Sans-serif
+@fontFamilyCalibri: Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+@fontFamilyArial: Arial, sans-serif;
+@fontFamilyLato: 'Lato', sans-serif;
+
+// Calligraphy
+@fontFamilyCalligraffitti: 'Calligraffitti', cursive;
+@fontFamilyPlayball: 'Playball', cursive;
+
+// Uprighth smooth
+@fontFamilyCabinSketch: 'Cabin Sketch', cursive;
+@fontFamilyProstoOne: 'Prosto One', cursive;
+
+html.typography select, .navbar2 {
+    font-family: @fontFamilyCabinSketch;
+}
+html a {
+    text-decoration: none;
+}
+html {
+    & h1 {
+        font-family: @fontFamilyCabinSketch;
+        text-shadow: 2px 2px 5px #000;
+    }
+    & h4 {
+        font-family: @fontFamilyProstoOne;
+    }
+    & h3 {
+        font-family: @fontFamilyCalligraffitti;
+    }
+    & .breadcrumb-wrap, .next-previous {
+        font-family: @fontFamilyPlayball;
+        margin-top: 10px;
+    }
+    & p {
+        font-family: @fontFamilyCabinSketch;
+    }
+}
+
+.flash-wrap img {
+    border: 4px solid @siteFooterBorderColor;
+    box-shadow: 8px 8px 5px #000;
+}
+
+@keyframes blinker {
+  50% { opacity: 0; }
+}
+
+.site-logo-text {
+    animation: blinker 2s linear 1;
+}
+
+// Size each item in the header
+.site-logo-text {
+    width: 20%;
+}
+
+.navbar2 {
+    border: 0;
+    width: 75%;
+    margin-left: 0;
+    & .rm-desktop li {
+        background-color: @navbarBgColor;
+        margin-right: -4px;
+        margin: 12px 12px;
+        border: 0;
+        box-shadow: 4px 4px 4px #000;
+    }
+    & .rm-desktop li a:hover {
+        animation: blinker 1s linear 2;
+    }
+    & .rm-desktop li a {
+        text-decoration: none;
+    }
+}
+
+.profile {
+    width: 5%;
+}

@@ -2,16 +2,21 @@
  *  Header
  */
 
- html {
-     font-family: 'Lato', sans-serif;
+ // Size each item in the header
+ .site-logo-text {
+     float: left;
+     width: 15%;
  }
 
  // Size each item in the header
- .site-logo-text,
- .navbar2,
+ .navbar2 {
+     float: left;
+     width: 80%;
+ }
+
  .profile {
      float: left;
-     width: 30%;
+     width: 5%;
  }
 
  .site-header {
@@ -19,12 +24,13 @@
      //margin-top: 8px;
  }
 
+@site_logo_text_shadow: #ccc;
  // Site title
  .site-logo-text {
     font-size: 3em;
     color: #000;
     font-family: 'Times New Roman',Times,serif;
-    text-shadow: 2px -2px 2px #ccc;
+    text-shadow: 2px -2px 2px @site_logo_text_shadow;
     padding-left: 8px;
     display: inline;
     float: left;
@@ -56,13 +62,16 @@
 }
 
 @rmColor: #096;
+@navbarBgColor: #096;
 @navbarItemBgColor: @navbarBgColor;
 @navbarBgColor: #096;
+@navbarBorderColor: darken(@navbarBgColor, 10%);
 @navbarBorderWidth: 2px;
 
 .border(@radius: 0, @width: 0) {
     border-radius: @radius;
-    border: @width solid darken(@navbarBgColor, 10%);
+//    border: @width solid darken(@navbarBgColor, 10%);
+    border: @width solid @navbarBorderColor;
 }
 .navbar2 {
     .border(5px, @navbarBorderWidth);
