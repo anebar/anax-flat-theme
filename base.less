@@ -43,7 +43,7 @@ body code {
 
 .site-logo-text {
    text-shadow: 2px -2px 2px @site_logo_text_shadow;
-   width: 20%;
+   //width: 20%;
 }
 
 .navbar2 {
@@ -137,4 +137,98 @@ div.site-footer {
 
 body hr::after {
 	background: none;
+}
+
+/* Byline */
+.content p img {
+    padding-right: 20px;
+}
+.author-byline {
+	border: 1px solid #ccc;
+	margin-bottom: 46px;
+	padding: 1em;
+	content: "";
+	display: block;
+	clear: both;
+    p {
+        margin: 0;
+    }
+}
+.blog-list .meta-footer,
+.blog-list .meta-header,
+.blog-post .meta-footer,
+.blog-post .meta-header {
+	font-size: .875em;
+	line-height: @magicNumber;
+	font-style: italic;
+	color: #999;
+    a {
+        text-decoration: none;
+        color: #999;
+    }
+}
+
+figure {
+    // margin-bottom: 24px;
+    // margin: 0;
+    // margin-right: 0px;
+    // margin-bottom: 0px;
+    // &.left {
+    //     float: left;
+    //     margin-right: 1em;
+    //     font-size: .875em;
+    // }
+    figcaption {
+        font-style: italic;
+        padding-top: 1em;
+    }
+}
+.figure {
+    // display: table;
+    // padding: 0;
+    figcaption {
+        display: table-caption;
+        caption-side: bottom;
+        padding-top: 12px;
+    }
+}
+// article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+//     display: block;
+// }
+
+.figure {
+    figcaption p {
+        margin-top: 0;
+    }
+    figcaption {
+        caption-side: bottom;
+    }
+}
+figure {
+    figcaption p {
+        margin-bottom: 0;
+    }
+    figcaption {
+        font-style: italic;
+    }
+    // &.left {
+    //     font-size: .875em;
+    // }
+}
+
+.article.images figure img {
+    border: 1px solid #333;
+}
+
+.route-images hr, .blog-post hr {
+    clear: both;
+}
+.route-blogg h1 {
+    clear: both;
+}
+.sidebar a {
+    text-decoration: none;
+}
+.article a {
+    text-decoration: underline;
 }

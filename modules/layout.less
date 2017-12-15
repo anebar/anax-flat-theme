@@ -97,25 +97,29 @@
     //background-color: green;
     //opacity: 0.5;
     &.has-sidebar-left {
-        .column((@columns - (2 * @columns / 12)) / 5 * 4);
-        .push(@columns / @columns);
+        // .column((@columns - (2 * @columns / 12)) / 5 * 4); // (24 - 4) / 5 * 4 = 20 / 5 * 4 = 16
+        // .push(@columns / @columns);
+        .column(@columns / 4 * 3);  // 24 / 4 * 3 = 18
     }
     &.has-sidebar-right {
-        .column((@columns - (2 * @columns / 12)) / 5 * 4);
-        .push(@columns / 12);
+        // .column((@columns - (2 * @columns / 12)) / 5 * 4);
+        // .push(@columns / 12);
+        .column(@columns / 4 * 3);  // 24 / 4 * 3 = 18
     }
 }
 
 .sidebar {
     &.has-sidebar-left {
-        .column((@columns - (2 * @columns / 12)) / 5);
-        .push(@columns / @columns);
+        // .column((@columns - (2 * @columns / 12)) / 5);
+        // .push(@columns / @columns);
+        .column(@columns / 4);  // 24 / 4 = 6
     }
 }
 .sidebar {
     &.has-sidebar-right {
-        .column((@columns - (2 * @columns / 12)) / 5);
-        .push(@columns / @columns);
+        // .column((@columns - (2 * @columns / 12)) / 5);
+        // .push(@columns / @columns);
+        .column(@columns / 4);  // 24 / 4 = 6
     }
 }
 
