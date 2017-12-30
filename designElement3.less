@@ -1,0 +1,124 @@
+/**
+* Anax Flat theme.
+* typography - A theme where the typography really stands out
+*/
+@import url(base.less);
+@import url(designElement.less);
+
+button, input, optgroup, select, textarea {
+    color: @bodyColor;
+}
+.navbar2 {
+    font-family: @fontFamilyLato;
+    color: @backgroundColor;
+}
+.rm-max .rm-mobile {
+    opacity: 0.8;
+}
+.outer-wrap.outer-wrap-header {
+    margin: 0;
+    padding: @magicNumber;
+}
+.breadcrumb-list {
+    background: linear-gradient(to right, #FFF, #CCC, #FFF);
+}
+.next-previous {
+    background-color: #ccc;
+    overflow: auto;
+}
+.previous {
+    background: linear-gradient(to right, #FFF, #CCC);
+}
+.next {
+    background: linear-gradient(to left, #FFF, #CCC);
+}
+.outer-wrap.outer-wrap-header, .outer-wrap.outer-wrap-flash, .outer-wrap.outer-wrap-footer {
+    background: linear-gradient(to right, #FFF, #CCC, #FFF);
+}
+.flash-wrap {
+    box-sizing: border-box;
+}
+.inner-wrap-main {
+    padding: 0 10px;
+    border-left: 1px solid #CC2424;
+    border-right: 1px solid #ccc;
+}
+
+/** Mixin to generate random number;
+ *  int should be 0 or 1, 1 being to make it an integer
+ **/
+.makeRandom1(@min: 0, @max: @min+1, @int: 0) {
+  .checkInt() {
+    @getNum: `Math.random() * (@{max} - @{min} + @{int})`;
+    @base: unit(`@{int} == 1 ? Math.floor(@{getNum}) : @{getNum}`);
+  }
+  .checkInt();
+  @randNum1: @base + @min;
+}
+.bkgBox1 {
+    background-color: #ccc;
+    background-image: url("../img/bkgBox1.jpg");
+    z-index: -1;
+    width: 150px;
+    height: 150px;
+    position:absolute;
+    top: 800px;
+    left: 100px;
+    .makeRandom1(0, 360, 1); /* random integer  between min and max */
+    -ms-transform: rotate(4deg); /* IE 9 */
+    -webkit-transform: rotate(4deg); /* Safari 3-8 */
+    transform: rotate(4deg); // 275deg
+}
+
+.bkgBox2 {
+    background-color: #ccc;
+    background-image: url("../img/bkgBox2.jpg");
+    z-index: -2;
+    width: 150px;
+    height: 150px;
+    position:absolute;
+    top: 307px;
+    left: 471px;
+    -ms-transform: rotate(147deg); /* IE 9 */
+    -webkit-transform: rotate(147deg); /* Safari 3-8 */
+    transform: rotate(147deg);
+}
+
+.bkgBox3 {
+    background-color: #CC2424;
+    background-image: url("../img/bkgBox3.jpg");
+    z-index: -3;
+    width: 150px;
+    height: 150px;
+    position:absolute;
+    top: 500px;
+    right: 170px;
+    -ms-transform: rotate(170deg); /* IE 9 */
+    -webkit-transform: rotate(170deg); /* Safari 3-8 */
+    transform: rotate(170deg);
+}
+.bkgBox4 {
+    background-color: #CC2424;
+    z-index: -1;
+    width: 150px;
+    height: 150px;
+    position:absolute;
+    top: 1000px;
+    right: 100px;
+    .makeRandom1(0, 360, 1); /* random integer  between min and max */
+    -ms-transform: rotate(@randNum1 * 1deg); /* IE 9 */
+    -webkit-transform: rotate(@randNum1 * 1deg); /* Safari 3-8 */
+    transform: rotate(@randNum1 * 1deg); // 275deg
+}
+
+@media screen and (max-width: 1440px) {
+    .bkgBox1 {
+        opacity: 0.4;
+    }
+    .bkgBox3 {
+        opacity: 0.4;
+    }
+    .bkgBox4 {
+        opacity: 0.8;
+    }
+}

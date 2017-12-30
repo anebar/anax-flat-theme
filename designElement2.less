@@ -1,0 +1,52 @@
+/**
+* Anax Flat theme.
+* typography - A theme where the typography really stands out
+*/
+@import url(base.less);
+@import url(designElement.less);
+
+.tinted-image { /* Example */
+  background:     /* top, transparent white, faked with gradient */
+    linear-gradient(
+      rgba(255, 0, 0, 0.45),
+      rgba(255, 0, 0, 0.45)
+    ),
+    /* bottom, image */
+    url(image.jpg);
+}
+
+body {
+    background: linear-gradient(to left,
+                    rgba(255, 255, 255, 0),
+                    rgba(255, 255, 255, 0.3),
+                    rgba(255, 255, 255, 0.9),
+                    rgba(255, 255, 255, 1),
+                    rgba(255, 255, 255, 1),
+                    rgba(255, 255, 255, 1),
+                    rgba(255, 255, 255, 1),
+                    rgba(255, 255, 255, 1)),
+                url("../img/designElement2Bkg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+button, input, optgroup, select, textarea {
+    color: @bodyColor;
+}
+.navbar2 {
+    font-family: @fontFamilyLato;
+    color: @backgroundColor;
+}
+.rm-max .rm-mobile {
+    opacity: 0.8;
+}
+.outer-wrap.outer-wrap-header {
+    margin: 0;
+    padding: @magicNumber;
+}
+html.designElement2 {
+    .site-footer {
+        opacity: 0.6;
+    }
+}
